@@ -48,6 +48,11 @@ void set_tags(int argc, char** argv)
 		cout << "too many arguments!" << endl;
 		exit(-1);
 	}
+	if (argc < 3)
+	{
+		cout << "not enough arguments!" << endl;
+		exit(-1);
+	}
 	if (std::filesystem::exists(std::filesystem::path{argv[1]}))
 	{
 		TagLib::FileRef f(argv[1]);
